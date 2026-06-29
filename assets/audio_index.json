@@ -1,0 +1,96 @@
+{
+  "p12": {
+    "title": "逊斋记",
+    "sections": [
+      {
+        "index": 1,
+        "title": "开场引子",
+        "filename": "p12-01-开场引子.mp3",
+        "size_kb": 326.29296875
+      },
+      {
+        "index": 2,
+        "title": "作者与背景",
+        "filename": "p12-02-作者与背景.mp3",
+        "size_kb": 522.32421875
+      },
+      {
+        "index": 3,
+        "title": "原文朗读 · 引导式导读",
+        "filename": "p12-03-原文朗读引导式导读.mp3",
+        "size_kb": 7409.94921875
+      },
+      {
+        "index": 4,
+        "title": "重点生词",
+        "filename": "p12-04-重点生词.mp3",
+        "size_kb": 799.21484375
+      },
+      {
+        "index": 5,
+        "title": "句式拆解",
+        "filename": "p12-05-句式拆解.mp3",
+        "size_kb": 988.35546875
+      },
+      {
+        "index": 6,
+        "title": "文化常识",
+        "filename": "p12-06-文化常识.mp3",
+        "size_kb": 871.35546875
+      },
+      {
+        "index": 7,
+        "title": "白话大意与写作意图",
+        "filename": "p12-07-白话大意与写作意图.mp3",
+        "size_kb": 955.16796875
+      }
+    ]
+  },
+  "p13": {
+    "title": "玉立斋记",
+    "sections": [
+      {
+        "index": 1,
+        "title": "开场引子",
+        "filename": "p13-01-开场引子.mp3",
+        "size_kb": 469.30859375
+      },
+      {
+        "index": 2,
+        "title": "作者与背景",
+        "filename": "p13-02-作者与背景.mp3",
+        "size_kb": 503.33984375
+      },
+      {
+        "index": 3,
+        "title": "原文朗读 · 引导式导读",
+        "filename": "p13-03-原文朗读引导式导读.mp3",
+        "size_kb": 11339.48046875
+      },
+      {
+        "index": 4,
+        "title": "重点生词",
+        "filename": "p13-04-重点生词.mp3",
+        "size_kb": 972.18359375
+      },
+      {
+        "index": 5,
+        "title": "句式拆解",
+        "filename": "p13-05-句式拆解.mp3",
+        "size_kb": 1356.37109375
+      },
+      {
+        "index": 6,
+        "title": "文化常识",
+        "filename": "p13-06-文化常识.mp3",
+        "size_kb": 1139.80859375
+      },
+      {
+        "index": 7,
+        "title": "白话大意与写作意图",
+        "filename": "p13-07-白话大意与写作意图.mp3",
+        "size_kb": 1692.88671875
+      }
+    ]
+  }
+}

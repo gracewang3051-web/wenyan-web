@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>文言文学习 · 入门</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="topbar">
+    <h1>📚 文言文学习</h1>
+    <span class="badge" id="version-badge">v1.0</span>
+  </div>
+
+  <div class="container">
+    <div class="hero">
+      <h2>语文练习题 · 人物传记类</h2>
+      <p>听先导课 · 听播客 · 闪卡复习</p>
+    </div>
+
+    <!-- 先导课（NotebookLM） -->
+    <div class="section-title">🎙️ 先导课（NotebookLM AI 对话 · 激发兴趣）</div>
+    <div id="notebooklm-list">
+      <div class="card" style="background: var(--bg); border-style: dashed;">
+        <div class="card-subtitle" style="text-align: center;">
+          正在生成第 12 篇先导课...<br>
+          <small>预计 10-20 分钟</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- TTS 引导式播客 -->
+    <div class="section-title">🎧 听播客（按板块听 · 主动思考）</div>
+    <a class="card" href="passage.html?id=p12">
+      <div class="card-title">第 12 篇 · 《逊斋记》</div>
+      <div class="card-subtitle">[元] 欧阳玄 · 议论文 · 入门阶段硬啃</div>
+      <div class="card-meta">
+        <span class="tag tag-primary">7 个板块</span>
+        <span class="tag">约 33 分钟</span>
+        <span class="tag tag-warning">含引导式导读</span>
+      </div>
+    </a>
+
+    <a class="card" href="passage.html?id=p13">
+      <div class="card-title">第 13 篇 · 《玉立斋记》</div>
+      <div class="card-subtitle">[宋] 杨万里 · 议论文夹叙事 · 入门阶段硬啃</div>
+      <div class="card-meta">
+        <span class="tag tag-primary">7 个板块</span>
+        <span class="tag">约 49 分钟</span>
+        <span class="tag tag-warning">含引导式导读</span>
+      </div>
+    </a>
+
+    <!-- 闪卡 -->
+    <div class="section-title">🃏 闪卡复习</div>
+    <a class="card" href="flashcard.html">
+      <div class="card-title">闪卡复习系统</div>
+      <div class="card-subtitle">实词 · 虚词 · 句式 · 翻译 · 断句 · 文化常识 · 文意 · 写作</div>
+      <div class="card-meta">
+        <span class="tag tag-success">55 张</span>
+        <span class="tag">支持按篇目/类型筛选</span>
+      </div>
+    </a>
+
+    <!-- 资料库 -->
+    <div class="section-title">📖 资料库</div>
+
+    <a class="resource-item" href="assets/data/knowledge-p12.html">
+      <div class="icon">📋</div>
+      <div class="info">
+        <div class="title">考点清单 · 第 12 篇</div>
+        <div class="desc">8 类知识点 · 高频标注</div>
+      </div>
+    </a>
+
+    <a class="resource-item" href="assets/data/knowledge-p13.html">
+      <div class="icon">📋</div>
+      <div class="info">
+        <div class="title">考点清单 · 第 13 篇</div>
+        <div class="desc">8 类知识点 · 高频标注</div>
+      </div>
+    </a>
+
+    <a class="resource-item" href="assets/data/plan-entry.html">
+      <div class="icon">📘</div>
+      <div class="info">
+        <div class="title">入门阶段辅导方案</div>
+        <div class="desc">4-6 周打基础 · 朗读 + 白话对照</div>
+      </div>
+    </a>
+
+    <a class="resource-item" href="assets/data/plan-advance.html">
+      <div class="icon">📗</div>
+      <div class="info">
+        <div class="title">12 周进阶方案</div>
+        <div class="desc">断句 · 翻译 · 实词系统</div>
+      </div>
+    </a>
+
+    <a class="resource-item" href="assets/data/workflow.html">
+      <div class="icon">✏️</div>
+      <div class="info">
+        <div class="title">题目订正与积累工作流</div>
+        <div class="desc">3 步阅读引导 + 5 步订正</div>
+      </div>
+    </a>
+
+    <a class="resource-item" href="assets/data/errors.html">
+      <div class="icon">📊</div>
+      <div class="info">
+        <div class="title">错题清单 + 错误模式分析</div>
+        <div class="desc">原卷子的错题汇总</div>
+      </div>
+    </a>
+
+    <a class="resource-item" href="assets/data/notebook.html">
+      <div class="icon">📝</div>
+      <div class="info">
+        <div class="title">积累本模板</div>
+        <div class="desc">手写三栏 · 高频词/句式/常识</div>
+      </div>
+    </a>
+
+    <div class="tip info" style="margin-top: 24px;">
+      <strong>使用流程：</strong> ① 听先导课（AI 对话）→ ② 按板块听 TTS（带暂停思考）→ ③ 做题订正 → ④ 闪卡复习
+    </div>
+    <div class="tip">
+      <strong>移动端：</strong> 建议 Chrome / Safari。可以"添加到主屏幕"，像 App 一样使用。
+    </div>
+  </div>
+
+  <script src="assets/data/notebooklm_index.js"></script>
+  <script>
+    // 渲染 NotebookLM 先导课列表
+    (function() {
+      const list = document.getElementById('notebooklm-list');
+      const items = (window.NOTEBOOKLM_INDEX && window.NOTEBOOKLM_INDEX.items) || [];
+      if (items.length === 0) {
+        return; // 保持"正在生成..."占位
+      }
+      list.innerHTML = '';
+      items.forEach(it => {
+        const a = document.createElement('a');
+        a.className = 'card';
+        a.href = `notebooklm.html?passage=${it.passage}`;
+        a.innerHTML = `
+          <div class="card-title">🎙️ ${it.title} · 先导课</div>
+          <div class="card-subtitle">AI 主持对话 · 激发兴趣 · 5-10 min</div>
+          <div class="card-meta">
+            <span class="tag tag-success">NotebookLM</span>
+            <span class="tag">音频对话</span>
+          </div>
+        `;
+        list.appendChild(a);
+      });
+    })();
+  </script>
+</body>
+</html>

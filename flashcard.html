@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>闪卡复习</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="topbar">
+    <a class="back" href="index.html">←</a>
+    <h1>🃏 闪卡复习</h1>
+  </div>
+
+  <div class="container">
+    <div class="filters" id="filters">
+      <div class="filter-chip active" data-filter="all">全部</div>
+      <div class="filter-chip" data-filter="p12">逊斋记</div>
+      <div class="filter-chip" data-filter="p13">玉立斋记</div>
+    </div>
+
+    <div class="filters" id="type-filters">
+      <div class="filter-chip active" data-type="all">全部类型</div>
+      <div class="filter-chip" data-type="实词">实词</div>
+      <div class="filter-chip" data-type="虚词">虚词</div>
+      <div class="filter-chip" data-type="句式">句式</div>
+      <div class="filter-chip" data-type="翻译">翻译</div>
+      <div class="filter-chip" data-type="断句">断句</div>
+      <div class="filter-chip" data-type="文化常识">文化常识</div>
+      <div class="filter-chip" data-type="文意">文意</div>
+      <div class="filter-chip" data-type="写作">写作</div>
+    </div>
+
+    <div class="progress" id="progress">0 / 0</div>
+
+    <div class="flashcard-container">
+      <div class="flashcard" id="card" onclick="flip()">
+        <div class="face front">
+          <div class="label">正面</div>
+          <div class="content" id="front">点击加载</div>
+          <div class="hint">点击卡片翻转</div>
+        </div>
+        <div class="face back">
+          <div class="label">背面</div>
+          <div class="content" id="back">点击加载</div>
+          <div class="hint" id="back-hint"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flashcard-controls">
+      <button class="btn" onclick="prev()">← 上一张</button>
+      <button class="btn btn-primary" onclick="next()">下一张 →</button>
+    </div>
+
+    <div class="tip" id="type-hint" style="margin-top: 16px;">
+      <strong>说明：</strong> 正面是关键词 / 句式 / 文化常识。点击卡片看背面释义。键盘左右箭头可以切换。
+    </div>
+  </div>
+
+  <script src="assets/data/flashcards.js"></script>
+  <script src="assets/js/flashcard.js"></script>
+</body>
+</html>

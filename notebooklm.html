@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>先导课 · NotebookLM</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="topbar">
+    <a class="back" href="index.html">←</a>
+    <h1>🎙️ 先导课</h1>
+  </div>
+
+  <div class="container">
+    <div class="audio-player">
+      <div class="title" id="lesson-title">加载中…</div>
+      <div class="subtitle" id="lesson-desc">NotebookLM AI 主持对话 · 5-10 min</div>
+      <audio id="audio" controls preload="metadata">
+        <source id="audio-source" src="" type="audio/mpeg">
+        浏览器不支持音频
+      </audio>
+      <div class="controls-hint">提示：先导课用来激发兴趣，可以一口气听完，再进入 TTS 引导式导读</div>
+    </div>
+
+    <div class="tip info">
+      <strong>为什么要听先导课？</strong><br>
+      1. 听 NotebookLM AI 主持人对话，让文言文变得有趣<br>
+      2. 提前了解文章背景和核心观点<br>
+      3. 进入 TTS 引导式导读时不会完全陌生
+    </div>
+
+    <div class="section-title">📋 学习流程建议</div>
+    <div class="card" style="background: var(--bg);">
+      <div class="card-title">① 先导课（5-10 min）</div>
+      <div class="card-subtitle">激发兴趣，了解背景</div>
+    </div>
+    <div class="card" style="background: var(--bg);">
+      <div class="card-title">② TTS 引导式导读（15-30 min）</div>
+      <div class="card-subtitle">按板块听，每板块含暂停思考</div>
+    </div>
+    <div class="card" style="background: var(--bg);">
+      <div class="card-title">③ 做题（30-45 min）</div>
+      <div class="card-subtitle">订正 + 写积累本</div>
+    </div>
+    <div class="card" style="background: var(--bg);">
+      <div class="card-title">④ 闪卡复习（15-20 min）</div>
+      <div class="card-subtitle">按类型筛选，逐个击破</div>
+    </div>
+
+    <div class="section-title" style="margin-top: 24px;">📚 配套资料</div>
+    <a class="resource-item" id="tts-link" href="#">
+      <div class="icon">🎧</div>
+      <div class="info">
+        <div class="title">TTS 引导式导读</div>
+        <div class="desc">听完先导课后听这个</div>
+      </div>
+    </a>
+    <a class="resource-item" id="knowledge-link" href="#">
+      <div class="icon">📋</div>
+      <div class="info">
+        <div class="title">考点清单</div>
+        <div class="desc">听完后复习用</div>
+      </div>
+    </a>
+  </div>
+
+  <script src="assets/data/notebooklm_index.js"></script>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const passageId = params.get('passage') || 'p12';
+    const items = (window.NOTEBOOKLM_INDEX && window.NOTEBOOKLM_INDEX.items) || [];
+    const item = items.find(i => i.passage === passageId);
+
+    if (!item) {
+      document.querySelector('.container').innerHTML = '<div style="padding: 40px; text-align: center;">该篇目暂无先导课</div>';
+    } else {
+      document.getElementById('lesson-title').textContent = `${item.title} · 先导课`;
+      document.getElementById('lesson-desc').textContent = 'NotebookLM AI 主持对话 · 5-10 min';
+      document.getElementById('audio-source').src = `assets/audio/notebooklm/${item.audio}`;
+      const audio = document.getElementById('audio');
+      audio.load();
+      document.getElementById('tts-link').href = `passage.html?id=${item.passage}`;
+      document.getElementById('knowledge-link').href = `assets/data/knowledge-${item.passage}.html`;
+    }
+  </script>
+</body>
+</html>
